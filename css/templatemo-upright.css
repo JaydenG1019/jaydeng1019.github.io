@@ -82,8 +82,8 @@ hr { border-top: 4px solid #CCC; }
 }
 
 .tm-section-wrap {
-	width: calc(100% - 750px);
-	margin-left: 750px;
+	width: calc(100% - 450px);
+	margin-left: 450px;
 	margin-right: 0;
 	position: relative;
 }
@@ -192,7 +192,7 @@ hr { border-top: 4px solid #CCC; }
 }
 
 .nav-icon {
-	width: 40px;
+	width: 30px;
 	margin-right: 10px;
 }
 
