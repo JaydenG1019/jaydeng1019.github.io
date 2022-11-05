@@ -462,7 +462,10 @@ figure.effect-honey:hover ul li a {
 	padding-right: 15px;
 }
 
-.tm-col-about-l { width: calc(100% - 400px); }
+.tm-col-about-l { width: calc(100% - 415px); 
+	margin-right: 15px;
+	margin-left: auto;
+}
 
 .tm-col-about-r {
 	width: 400px;
@@ -541,17 +544,17 @@ figure.effect-honey:hover ul li a {
 .tm-carousel-item {
 	padding-left: 15px;
 	padding-right: 15px;
-	max-width: 300px;
+	max-width: 400px;
 }
 
 .tm-carousel figure {
 	position: relative;
 	float: left;
 	overflow: hidden;	
-	background: #3085a3;
+	/* background: #3085a3; */
 	text-align: center;
 	cursor: pointer;
-	max-width: 270px;
+	max-width: 370px;
 }
 
 .tm-carousel figure img {
