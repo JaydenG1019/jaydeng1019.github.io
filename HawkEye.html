@@ -1,0 +1,106 @@
+
+<html>
+<body style='width:960px;margin: 0px auto;font-family:sans-serif;color:#404040; background-color:#f0f0f0;height:230px;overflow-y: scroll;'>
+
+<br>
+<center>
+<img src="img/HawkEye/Ilogo.png" height=50em>
+</center>
+
+<h1><center>High Resolution Millimeter Wave Imaging Using Deep Adversarial Learning</center></h1>
+<br>
+<p align="justify">
+Autonomous vehicles today use LiDAR and cameras for obtaining 3-dimensional images of the environment.
+However, both LiDAR and cameras fail in low visibility situations created by fog, snowstorms, sandstorms, etc.
+In contrast, millimeter wave (mmWave) radar can image through fog and bad weather.
+</p>
+<p align="justify">
+In this project, we try to overcome the poor perceptual quality of mmWave imaging radars, such as specularity, artifacts and low resolution,
+so as to provide autonomous vehicle with high resolytion and relialbe perception in inclement weathers. We propose a prototype system, that consolidates advances in AI and radar signal processing to sense and recover high
+resolution images from the low resolution mmWave radar heatmaps.
+</p>
+<!--We take an innovative approach of using multi-armed beams to reduce the total time taken by the scan.-->
+<br>
+<h2><center>Preliminary Results</center></h2>
+<p align="justify">
+We show the performance of our system in fog, clear weather, and rain in the following figures:
+<br>
+</p>
+<center>
+<b>Performance with fog in scene:</b>
+</center>
+<br>
+<center>
+<img width="900" height="675" src="img/HawkEye/fog_pc.png" frameborder="0" allowfullscreen></iframe>
+</center>
+<p> Column (a) shows the original scene. Column (b) shows the corresponding ground truth. Column (c) shows the scene with fog.
+Column (d) and (e) show the radar heatmap in the form of 3D point-cloud and 2D front-view projection respectively.
+Column (f) shows the output of our system.
+<pr>
+<br>
+<br>
+<center>
+<b>Randomly sampled qualitative results:</b>
+</center>
+<br>
+<center>
+<img width="900" height="1800" src="img/HawkEye/random_all.png" frameborder="0" allowfullscreen></iframe>
+</center>
+<p> Column (a) shows the original scene. Column (b) shows the corresponding ground truth.
+Column (c) and (d) show the radar heatmap in the form of 3D point-cloud and 2D front-view projection respectively.
+Column (e) shows the output of our system.
+<pr>
+<br>
+<br>
+<center>
+<b>Performance with multiple cars in the scene:</b>
+</center>
+<br>
+<center>
+<img width="900" height="300" src="img/HawkEye/multiple.png" frameborder="0" allowfullscreen></iframe>
+</center>
+<p> Column (a) shows the original scene. Column (b) shows the corresponding ground truth.
+Column (c) and (d) show the radar heatmap in the form of 3D point-cloud and 2D front-view projection respectively.
+Column (e) shows the output of our system.
+<pr>
+<br>
+<br>
+<center>
+<b>Performance with rain in scene:</b>
+</center>
+<br>
+<center>
+<img width="900" height="450" src="img/HawkEye/rain_pc.png" frameborder="0" allowfullscreen></iframe>
+</center>
+<p>
+Column (a) shows the original scene. Column (b) shows the scene with rain.
+Column (c) and (d) show the radar heatmap in the form of 3D point-cloud and 2D front-view projection respectively.
+Column (e) shows the output of our system.
+<pr>
+<br>
+
+<br>
+<center>
+<b>Quantitative Results:</b>
+</center>
+<p>
+We evaluate accuracy in range, size (length, width, height), and orientation of the car captured by our system.
+We also evaluate accuracy in shape prediction by comparing the percentage of Car’s Surface Missed (false negatives) and
+the percentage of Fictitious Reflections (false positives) along the front view of the scen.
+<pr>
+<br>
+<center>
+<img width="800" height="400" src="img/HawkEye/quant.png" frameborder="0" allowfullscreen></iframe>
+</center>
+<br>
+
+<center>
+<hr width="70%" style="border:1px solid #909090;">
+<font size=2>
+ <a href="http://www.illinois.edu">University of Illinois at Urbana Champaign</a> | <a href="http://synrg.csl.illinois.edu">SyNRG</a>
+</font>
+</center>
+<br>
+<br>
+</body>
+</html>
