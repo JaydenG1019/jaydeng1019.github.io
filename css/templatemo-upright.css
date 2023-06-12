@@ -76,14 +76,14 @@ hr { border-top: 4px solid #CCC; }
 	bottom: 0;
 	left: 0;
 	z-index: 1000;
-	padding-left: 40px;
-	padding-top: 40px;
+	padding-left: 30px;
+	padding-top: 30px;
 	width: 300px;
 }
 
 .tm-section-wrap {
-	width: calc(100% - 450px);
-	margin-left: 450px;
+	width: calc(100% - 330px);
+	margin-left: 330px;
 	margin-right: 0;
 	position: relative;
 }
@@ -97,7 +97,6 @@ hr { border-top: 4px solid #CCC; }
 }
 
 .tm-parallax {
-	width: 400px;	
 	min-height: 100%;
 	height: auto;
 	background: transparent;
@@ -462,25 +461,20 @@ figure.effect-honey:hover ul li a {
 	padding-right: 15px;
 }
 
-.tm-col-about-l { width: calc(100% - 415px); 
+.tm-col-about-l { width: calc(100% - 315px); 
 	margin-right: 15px;
-	margin-left: auto;
+	margin-left: 0;
 }
 
 .tm-col-about-r {
-	width: 400px;
+	width: 300px;
 	margin-right: 0;
 	margin-left: auto;
 }
 
-@media (max-width: 1660px) {
+@media (max-width: 800px) {
 	.tm-col-about { width: 50%; }
-	.tm-col-about-l { padding-right: 30px; }
-}
-
-@media (max-width: 1200px) {
-	.tm-col-about { width: 100%; }
-	.tm-col-about-l { padding-right: 0; }
+	.tm-col-about-l { padding-right: 15px; }
 }
 
 .tm-social {
