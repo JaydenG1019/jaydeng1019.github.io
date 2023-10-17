@@ -196,7 +196,7 @@ hr { border-top: 4px solid #CCC; }
 }
 
 /* Home section */
-#home { min-height: 100vh; }
+#home { min-height: 50vh; }
 .tm-col-home-l { width: calc(100% - 300px); }
 
 .tm-img-home-container {
