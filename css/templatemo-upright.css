@@ -461,13 +461,13 @@ figure.effect-honey:hover ul li a {
 	padding-right: 15px;
 }
 
-.tm-col-about-l { width: calc(100% - 315px); 
+.tm-col-about-l { width: calc(100% - 500px); 
 	margin-right: 15px;
 	margin-left: 0;
 }
 
 .tm-col-about-r {
-	width: 300px;
+	width: 240px;
 	margin-right: 0;
 	margin-left: auto;
 }
