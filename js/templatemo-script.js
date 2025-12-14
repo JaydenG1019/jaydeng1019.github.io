@@ -17,7 +17,8 @@ $(document).ready(function () {
         if (current === "index.html") {
             $('.tm-nav a[href="index.html#home"]').addClass('current');
             $("#tm-main-nav").singlePageNav({
-                filter: ':not(.external)'
+                filter: ':not(.external)',
+                preventDefault: false
             });
         }
 
