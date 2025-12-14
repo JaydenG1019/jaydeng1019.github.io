@@ -1,39 +1,45 @@
 $(document).ready(function () {
     // Load navigation
-    $("#tm-sidebar").load("nav.html", function() {
-        // Set the current page link to active
-        var current = window.location.pathname.split("/").pop();
-        if (current === "") {
-            current = "index.html";
-        }
-
-        $('.tm-nav a[href="' + current + '"]').addClass('current');
-        
-        // Special case for single-page nav links on index.html
-        if (current === "index.html") {
-            $('.tm-nav a[href="index.html#home"]').addClass('current');
-            $("#tm-main-nav").singlePageNav({
-                filter: ':not(.external)'
-            });
-        }
-
-        // Mobile menu toggle
-        $(".navbar-toggler").on("click", function(e) {
-            $(".tm-sidebar").toggleClass("show");
-            e.stopPropagation();
-        });
-
-        // Close mobile menu when clicking outside
-        $("html").click(function(e) {
-            var sidebar = document.getElementById("tm-sidebar");
-            if (!sidebar.contains(e.target)) {
-                $(".tm-sidebar").removeClass("show");
+    // Use .get() to fetch the content, then .replaceWith() to swap the placeholder
+    $.get("nav.html", function(data) {
+        $("#sidebar-placeholder").replaceWith(data);
+    
+        // The rest of the setup code needs to run after the nav is loaded
+        $(function() {
+            // Set the current page link to active
+            var current = window.location.pathname.split("/").pop();
+            if (current === "") {
+                current = "index.html";
             }
-        });
-
-        // Close mobile menu when a link is clicked
-        $("#tm-sidebar .nav-link").click(function(e) {
-            $(".tm-sidebar").removeClass("show");
+    
+            $('.tm-nav a[href="' + current + '"]').addClass('current');
+            
+            // Special case for single-page nav links on index.html
+            if (current === "index.html") {
+                $('.tm-nav a[href="index.html#home"]').addClass('current');
+                $("#tm-main-nav").singlePageNav({
+                    filter: ':not(.external)'
+                });
+            }
+    
+            // Mobile menu toggle
+            $(".navbar-toggler").on("click", function(e) {
+                $(".tm-sidebar").toggleClass("show");
+                e.stopPropagation();
+            });
+    
+            // Close mobile menu when clicking outside
+            $("html").click(function(e) {
+                var sidebar = document.getElementById("tm-sidebar");
+                if (sidebar && !sidebar.contains(e.target)) {
+                    $(".tm-sidebar").removeClass("show");
+                }
+            });
+    
+            // Close mobile menu when a link is clicked
+            $("#tm-sidebar .nav-link").click(function(e) {
+                $(".tm-sidebar").removeClass("show");
+            });
         });
     });
 
