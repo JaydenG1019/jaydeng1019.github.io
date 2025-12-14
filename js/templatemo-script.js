@@ -284,6 +284,8 @@ $(document).ready(function () {
         });
 
         // Re-initialize parallax after content is loaded
-        $('.tm-parallax').parallax();
+        if ($('.tm-parallax').length) {
+            $('.tm-parallax').parallax();
+        }
     });
 });
