@@ -192,21 +192,6 @@ $(document).ready(function () {
             }
         });
 
-        /****************** Smooth Scrolling *****************/
-
-        $(".tm-btn-next").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-                    // window.location.hash = hash;
-                });
-            }
-        });
-
         /************** "About" Carousel *****************/
 
         $('.tm-carousel').slick({
