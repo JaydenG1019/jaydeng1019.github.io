@@ -1,35 +1,47 @@
-/**
- * Credits
- * Isotope with paging: https://codepen.io/TimRizzo/details/ervrRq
- */
-
 $(document).ready(function () {
-
-    /*************** Navigation *****************/
-
-    $("#tm-main-nav").singlePageNav({
-        filter: ':not(.external)'
-    });
-
-    $(".navbar-toggler").on("click", function(e) {
-        $(".tm-sidebar").toggleClass("show");
-        e.stopPropagation();
-    });
-
-    $("html").click(function(e) {
-        var sidebar = document.getElementById("tm-sidebar");
-
-        if (!sidebar.contains(e.target)) {
-            $(".tm-sidebar").removeClass("show");
+    // Load navigation
+    $("#tm-sidebar").load("nav.html", function() {
+        // Set the current page link to active
+        var current = window.location.pathname.split("/").pop();
+        if (current === "") {
+            current = "index.html";
         }
+
+        $('.tm-nav a[href="' + current + '"]').addClass('current');
+        
+        // Special case for single-page nav links on index.html
+        if (current === "index.html") {
+            $('.tm-nav a[href="index.html#home"]').addClass('current');
+            $("#tm-main-nav").singlePageNav({
+                filter: ':not(.external)'
+            });
+        }
+
+        // Mobile menu toggle
+        $(".navbar-toggler").on("click", function(e) {
+            $(".tm-sidebar").toggleClass("show");
+            e.stopPropagation();
+        });
+
+        // Close mobile menu when clicking outside
+        $("html").click(function(e) {
+            var sidebar = document.getElementById("tm-sidebar");
+            if (!sidebar.contains(e.target)) {
+                $(".tm-sidebar").removeClass("show");
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        $("#tm-sidebar .nav-link").click(function(e) {
+            $(".tm-sidebar").removeClass("show");
+        });
     });
 
-    $("#tm-sidebar .nav-link").click(function(e) {
-        $(".tm-sidebar").removeClass("show");
-    });
+    // Update copyright year
+    const currentYear = new Date().getFullYear();
+    $('#copyright').html(`Copyright ${currentYear} Junfeng Guan`);
 
-    /*************** Gallery ******************/
-    
+    // Isotope Gallery
     var itemSelector = ".tm-gallery-item"; 
     var responsiveIsotope = [ [480, 4], [720, 6], [1920, 9] ];
     var itemsPerPageDefault = 12;
