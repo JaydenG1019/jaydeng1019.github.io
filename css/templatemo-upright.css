@@ -731,3 +731,22 @@ select:not([multiple]) {
 		margin-left: 0;
 	}
 }
+
+.tm-text-black {
+    color: #000000;
+}
+
+.author-me {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.text-highlight {
+    color: firebrick;
+    font-weight: bold;
+}
+
+.publication-title {
+    font-size: 1.25rem;
+    color: #000;
+}
